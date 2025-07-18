@@ -24,13 +24,7 @@
 - Solidity
 - Hardhat (Ethereum development environment)
 
-### Backend (Optional for MVP)
-- Node.js + Express (or skip and use The Graph / on-chain data only)
-- MongoDB (if needed for extra off-chain info)
-
 ### DAO Governance
-- Snapshot (off-chain voting)
-- ERC-20 based voting power
 - Community-curated whitelist for fair voting
 
 ## 🧱 Project Structure
