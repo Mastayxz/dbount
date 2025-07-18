@@ -28,3 +28,15 @@
 - Community-curated whitelist for fair voting
 
 ## 🧱 Project Structure
+dbounT/
+├── client/ # React-based dApp
+│ ├── src/
+│ └── ...
+├── contracts/ # Solidity Smart Contracts
+│ ├── BountyFactory.sol
+│ ├── BountyDAO.sol
+│ └── ...
+├── hardhat.config.js
+├── scripts/ # Deployment scripts
+├── README.md
+└── package.json
