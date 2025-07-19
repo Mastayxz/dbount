@@ -1,0 +1,16 @@
+{
+  "canisters": {
+    "dbounT_frontend": {
+      "type": "assets",
+      "source": "client/dist"
+    }
+  },
+  "dfx": "0.17.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
