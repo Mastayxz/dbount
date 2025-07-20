@@ -11,3 +11,11 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.js
 ```
+
+how to run
+```shell
+npx hardhat node
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+copy contract addres ke daoContract.js (client direktory)
