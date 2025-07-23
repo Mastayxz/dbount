@@ -37,10 +37,7 @@ export async function updateProblem(
   description: string,
   reward: string
 ) {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
-  const contract = getDAOContract(signer);
-//   console.log(Object.keys(contract.functions));
+  const contract = await getDAOContract();
 
   const tx = await contract.updateProblem(id, description, {
     value: ethers.utils.parseEther(reward),

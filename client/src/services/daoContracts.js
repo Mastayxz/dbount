@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import DAO from "../abi/DAO.json";
 
 const DAO_ABI = DAO.abi;
-const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // ganti dengan benar
+const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 export const getDAOContract = async () => {
   if (window.ethereum) {
