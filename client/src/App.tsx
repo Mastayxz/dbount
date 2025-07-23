@@ -1,5 +1,5 @@
 import React from "react";
-import SubmitProblem from "./components/submitProblem";
+import SubmitProblem from "./pages/submitProblem";
 
 function App() {
   return (
