@@ -7,6 +7,7 @@ function SubmitProblem() {
   const [reward, setReward] = useState("");
   const [account, setAccount] = useState(null);
 
+  // Function to connect to the user's wallet
   const connectWallet = async () => {
     if (window.ethereum) {
       try {
