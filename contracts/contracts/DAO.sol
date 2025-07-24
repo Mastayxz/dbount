@@ -119,4 +119,30 @@ contract DAO {
     function getSolutionsCount(uint problemId) external view returns (uint) {
         return problemSolutions[problemId].length;
     }
+
+    function updateProblem(
+        uint problemId,
+        string memory newDescription
+    ) external payable {
+        Problem storage p = problems[problemId];
+
+        require(p.owner == msg.sender, "Not owner");
+        require(!p.isResolved, "Problem already resolved");
+
+        // Kembalikan reward lama ke pemilik
+        uint oldReward = p.reward;
+
+        if (oldReward > 0) {
+            (bool sent, ) = msg.sender.call{value: oldReward}("");
+            require(sent, "Refund failed");
+        }
+
+        p.description = newDescription;
+        p.reward = msg.value;
+    }
+
+    function deleteProblem(uint problemId) external {
+        require(problems[problemId].owner == msg.sender, "Not owner");
+        delete problems[problemId];
+    }
 }
