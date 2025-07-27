@@ -7,7 +7,7 @@ export const fetchAllProblems = async (): Promise<Problem[]> => {
   const contract = await getDAOContract();
   const count = await contract.problemCounter();
   const ids = Array.from({ length: count }, (_, i) => i + 1);
-
+  
   const problems = await Promise.all(
     ids.map(async (id) => {
       const p = await contract.problems(id);
